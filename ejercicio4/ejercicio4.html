@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Datos</title>
+    <script>
+        function ingresarDatos() {
+            // Ingresar datos
+            const nombre = prompt("Ingrese su nombre:");
+            const edad = parseInt(prompt("Ingrese su edad:"), 10);
+            const sexo = prompt("Ingrese su sexo (Masculino/Femenino):").toLowerCase();
+
+            // Validar condiciones
+            if (sexo === "masculino" && edad >= 18) {
+                // Imprimir datos si es masculino y mayor de edad
+                alert(`Nombre: ${nombre}\nEdad: ${edad}\nSexo: ${sexo.charAt(0).toUpperCase() + sexo.slice(1)}`);
+            } else {
+                // Indicar que no se pueden brindar datos
+                alert("No está permitido brindar sus datos.");
+            }
+        }
+    </script>
+</head>
+<body onload="ingresarDatos()">
+</body>
+</html>
